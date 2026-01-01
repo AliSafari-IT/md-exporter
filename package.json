@@ -1,6 +1,6 @@
 {
   "name": "@asafarim/md-exporter",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Export files from a target folder into a single Markdown file",
   "type": "module",
   "main": "./dist/index.js",
