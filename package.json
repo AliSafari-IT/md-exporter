@@ -1,0 +1,43 @@
+{
+  "name": "@asafarim/md-exporter",
+  "version": "0.1.0",
+  "description": "Export files from a target folder into a single Markdown file",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "md-exporter": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "fast-glob": "^3.3.2",
+    "prettier": "^3.1.1",
+    "isbinaryfile": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  },
+  "author": "Asafarim",
+  "license": "MIT",
+  "homepage": "https://github.com/AliSafari-IT/md-exporter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AliSafari-IT/md-exporter.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
