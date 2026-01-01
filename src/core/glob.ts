@@ -14,6 +14,8 @@ export async function getGlobPattern(options: ExportOptions): Promise<string[]> 
     globPattern = '**/*.css';
   } else if (filter === 'md') {
     globPattern = '**/*.md';
+  } else if (filter === 'json') {
+    globPattern = '**/*.json';
   } else {
     globPattern = '**/*';
   }

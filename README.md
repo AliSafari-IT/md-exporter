@@ -61,7 +61,7 @@ md-exporter <targetPath> [options]
 
 ### Options
 
-- `--filter <all|tsx|css|md|glob>` - File filter type (default: all)
+- `--filter <all|tsx|css|md|json|glob>` - File filter type (default: all)
 - `--pattern <glob>` - Glob pattern (required when filter=glob)
 - `--exclude <csv>` - Comma-separated directory exclusions (default: "node_modules,.git,dist")
 - `--max-size <mb>` - Maximum file size in MB (default: 5)
@@ -79,6 +79,12 @@ md-exporter <targetPath> [options]
 
 ```bash
 md-exporter ./src --filter tsx --out-dir ./exports
+```
+
+### Export all JSON files from a folder
+
+```bash
+md-exporter ./src --filter json --out-dir ./exports
 ```
 
 ### Export with custom glob pattern

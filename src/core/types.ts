@@ -1,4 +1,4 @@
-export type FilterType = 'all' | 'tsx' | 'css' | 'md' | 'glob';
+export type FilterType = 'all' | 'tsx' | 'css' | 'md' | 'json' | 'glob';
 export type EolType = 'lf' | 'crlf';
 
 export interface ExportOptions {
