@@ -17,7 +17,10 @@
   ],
   "scripts": {
     "build": "tsup",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "preversion": "pnpm build && git add .",
+    "version": "git commit -m \"chore: bump version to v%s\" && git push",
+    "postversion": "npm publish"
   },
   "dependencies": {
     "commander": "^11.1.0",

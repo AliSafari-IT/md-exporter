@@ -156,3 +156,35 @@ The tool generates a Markdown file with:
 - Per-file headers: `file {absolute-path}:`
 - Syntax-highlighted code blocks with language tags
 - Optional JSON report with metrics and timings
+
+## Publishing
+
+This package is set up for automated publishing to NPM:
+
+### Local Version Bump & Publish
+
+```bash
+# Bump version and publish automatically
+npm version patch  # or minor, major
+```
+
+This will:
+1. Build the package
+2. Update version in package.json
+3. Commit the version change
+4. Push to GitHub
+5. Publish to NPM
+
+### GitHub Actions
+
+The package also uses GitHub Actions for automatic publishing when tags are pushed:
+
+```bash
+# Create and push a tag to trigger publishing
+git tag v0.2.0
+git push origin v0.2.0
+```
+
+**Setup Required:**
+- Add `NPM_TOKEN` to GitHub repository secrets
+- Ensure you have publish access to the `@asafarim/md-exporter` package
